@@ -1,0 +1,114 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I wanna burn"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textCalories"
+        android:layout_below="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        android:layout_toLeftOf="@+id/center"
+        android:layout_marginTop="10dp"
+        />
+    <View
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/text2"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/textCalories"
+        android:layout_alignBottom="@+id/textCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calories"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCalories"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="1000"
+        android:progress="3" />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="by"
+        android:textSize="25dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_centerHorizontal="true"/>
+
+
+        <com.tmall.ultraviewpager.UltraViewPager
+            android:id="@+id/ultra_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/text3"
+            android:background="@android:color/white" />
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I need to "
+        android:textSize="25dp"
+        android:layout_alignBottom="@+id/textAction"
+        android:layout_toLeftOf="@+id/textAction"/>
+    <TextView
+        android:id="@+id/textAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="run"
+        android:textSize="28dp"
+        android:layout_below="@+id/ultra_viewpager"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_below="@+id/textAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/center"/>
+    <TextView
+        android:id="@+id/textUnit"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/textAmount"
+        android:layout_alignBottom="@+id/textAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="km"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
