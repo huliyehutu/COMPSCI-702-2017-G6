@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Where\'s my class</string>
+    <string name="app_name">Burning Calories</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Calories Calculator</string>
     <string-array name="sports">
         <item>WALKING</item>
         <item>RUNNING</item>
@@ -10,11 +10,11 @@
         <item>YOGA</item>
     </string-array>
     <string-array name="action">
-        <item>walk</item>
-        <item>run</item>
-        <item>swim</item>
-        <item>jump</item>
-        <item>do</item>
+        <item>Walk</item>
+        <item>Run</item>
+        <item>Swim</item>
+        <item>Jump</item>
+        <item>Do</item>
     </string-array>
     <string-array name="unit">
         <item>km</item>

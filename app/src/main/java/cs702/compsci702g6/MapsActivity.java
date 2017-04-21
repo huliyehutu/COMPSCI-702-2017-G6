@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,7 +22,7 @@ import com.tmall.ultraviewpager.UltraViewPager;
 import com.tmall.ultraviewpager.transformer.UltraDepthScaleTransformer;
 
 
-public class MapsActivity extends FragmentActivity {
+public class MapsActivity extends AppCompatActivity {
 
     Context mContext = this;
     private ViewPager pager;
@@ -31,13 +33,17 @@ public class MapsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         UltraViewPager ultraViewPager = (UltraViewPager)findViewById(R.id.ultra_viewpager);
         ultraViewPager.setScrollMode(UltraViewPager.ScrollMode.HORIZONTAL);
         ultraViewPager.setPageTransformer(false, new UltraDepthScaleTransformer());
 //initialize UltraPagerAdapter，and add child view to UltraViewPager
         PagerAdapter adapter = new UltraPagerAdapter();
         ultraViewPager.setAdapter(adapter);
-
+        ultraViewPager.setMultiScreen(0.5f);
+        ultraViewPager.setItemRatio(1.0f);
 
 //set an infinite loop
         ultraViewPager.setInfiniteLoop(true);

@@ -17,7 +17,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="AppTheme.BrandedLaunch" parent="AppTheme.NoActionBar">
-        <item name="android:windowBackground">@mipmap/launching_pagexhdpi</item>
+        <!--<item name="android:windowBackground">@mipmap/launching_pagexhdpi</item>-->
         <item name="android:windowFullscreen">true</item>
     </style>
 </resources>
